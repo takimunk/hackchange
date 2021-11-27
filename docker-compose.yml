@@ -6,13 +6,16 @@ networks:
 
 services:
   jupyter:
-    image: docker.io/jupyter/pyspark-notebook
+    image: diipushk/hackchange-notebook
     ports:
       - "10000:8888"
+      - "4040:4040"
     volumes:
       - "${PWD}:/home/jovyan/work"
     environment:
     - JUPYTER_ENABLE_LAB=yes
+    - GRANT_SUDO=yes
+    - user=root
     networks:
       - hackchange-net
 

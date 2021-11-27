@@ -44,6 +44,15 @@ services:
     networks:
       - hackchange-net
 
+  aerospikedb:
+      image: docker.io/aerospike/aerospike-server:latest
+      ports:
+      - "3000-3002:3000-3002"
+      networks:
+        - hackchange-net
+      volumes:
+      - "${PWD}/data/aerospike_data:/opt/aerospike/etc"
+
 volumes:
   zookeeper_data:
     driver: local

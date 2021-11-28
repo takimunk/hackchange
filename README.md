@@ -1,5 +1,6 @@
 # hackchange
 Source code for 2021.11.26 -2021.11.28 Hack&amp;Change hackathon
+
 Для запуска окружения необходимо
 1. Собрать образ Jupyter Notebook из папки hackchange-notebook (aerospike connector работает только со spark < 3.1, поэтому нельзя использовать готовый image docker-stacks)
 2. С помощью docker-compose.yml развернуть окружение, включающее в себя 4 контейнера:

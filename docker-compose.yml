@@ -6,7 +6,7 @@ networks:
 
 services:
   jupyter:
-    image: diipushk/hackchange-notebook
+    image: hackchange-notebook:latest
     ports:
       - "10000:8888"
       - "4040:4040"
